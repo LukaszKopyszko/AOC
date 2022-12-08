@@ -8,15 +8,13 @@ function sumCalories() {
         return calories.reduce((previous, current) => previous + current, 0);
         
     });
-    //GIVE ME FIRST STAR
-    const max = calories.reduce((a,b) => Math.max(a,b), -Infinity);
-    console.log(max);
 
-    //GIVE ME SECOND STAR
-    const sorted = calories.sort((a,b) => b-a);
-    const top = sorted.slice(0, 3);
-    const sum = top.reduce((a,b) => a+b, 0);
-    console.log(sum);
+    const max = calories.reduce((a,b) => Math.max(a,b), -Infinity);
+    console.log(`Single Max: ${max}`);
+
+    
+    const sorted = calories.sort((a,b) => b-a).slice(0, 3).reduce((a,b) => a+b, 0);
+    console.log(`Top 3 sum: ${sorted}`);
     
 }
 sumCalories();

@@ -12,8 +12,6 @@ function game() {
     const paper = 2;
     const scissors = 3;
 
-
-
-    console.log(input);
+    console.log(xd);
 }
 game();
